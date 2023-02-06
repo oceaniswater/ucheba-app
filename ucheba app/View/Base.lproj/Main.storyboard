@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2fd-ob-kaX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ucheba_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOG-Oz-veH">
+                                <rect key="frame" x="131" y="409" width="131" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="All institutions"/>
+                                <connections>
+                                    <segue destination="FVD-IQ-N63" kind="show" id="7Tu-I5-cGB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MOG-Oz-veH" secondAttribute="bottom" constant="374" id="8QI-dQ-nux"/>
+                            <constraint firstItem="MOG-Oz-veH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="306" id="H0Y-NM-SSx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MOG-Oz-veH" secondAttribute="trailing" constant="131" id="geH-ch-IHH"/>
+                            <constraint firstItem="MOG-Oz-veH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="mkY-Pl-o6A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ybk-E7-AgT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849.61832061068696" y="-27.464788732394368"/>
+        </scene>
+        <!--Institutions List View Controller-->
+        <scene sceneID="IO0-OE-DT6">
+            <objects>
+                <viewController id="FVD-IQ-N63" customClass="InstitutionsListViewController" customModule="ucheba_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PEP-yy-rKm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="KYJ-DF-edm">
+                                <rect key="frame" x="0.0" y="103" width="393" height="261"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18617.upto100x100" translatesAutoresizingMaskIntoConstraints="NO" id="m2t-lS-Vlg">
+                                        <rect key="frame" x="136.66666666666666" y="0.0" width="119.99999999999997" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="aly-FY-rcK"/>
+                                            <constraint firstAttribute="height" constant="120" id="vRa-gW-zIQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Омский государственный университет путей сообщения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vcc-Cc-JQb">
+                                        <rect key="frame" x="13.666666666666657" y="139" width="365.66666666666674" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vO-NE-vOs">
+                                        <rect key="frame" x="141.33333333333334" y="206" width="110.33333333333334" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="fFN-ku-ajY"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110.33" id="vHJ-0B-DK8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Learn more"/>
+                                        <connections>
+                                            <action selector="learnMoreTapped:" destination="FVD-IQ-N63" eventType="touchUpInside" id="aUH-mx-Ngu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CXC-bl-cNw">
+                                <rect key="frame" x="0.0" y="406" width="393" height="446"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReuseCell" id="oe4-ZR-yfK">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oe4-ZR-yfK" id="hhL-r7-lGa">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LlQ-kv-DDO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CXC-bl-cNw" secondAttribute="bottom" id="6w4-8N-I1J"/>
+                            <constraint firstItem="LlQ-kv-DDO" firstAttribute="trailing" secondItem="KYJ-DF-edm" secondAttribute="trailing" id="DBa-os-NcS"/>
+                            <constraint firstItem="CXC-bl-cNw" firstAttribute="trailing" secondItem="LlQ-kv-DDO" secondAttribute="trailing" id="F6M-sc-yaB"/>
+                            <constraint firstItem="CXC-bl-cNw" firstAttribute="leading" secondItem="LlQ-kv-DDO" secondAttribute="leading" id="aaz-R9-afP"/>
+                            <constraint firstItem="KYJ-DF-edm" firstAttribute="leading" secondItem="LlQ-kv-DDO" secondAttribute="leading" id="cI9-3a-ggu"/>
+                            <constraint firstItem="CXC-bl-cNw" firstAttribute="top" secondItem="KYJ-DF-edm" secondAttribute="bottom" constant="42" id="cdp-Wt-Myj"/>
+                            <constraint firstItem="KYJ-DF-edm" firstAttribute="top" secondItem="LlQ-kv-DDO" secondAttribute="top" id="fRg-g5-PIf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HgC-jF-qJC"/>
+                    <connections>
+                        <outlet property="institutionList" destination="CXC-bl-cNw" id="3bR-My-uZ6"/>
+                        <outlet property="logo" destination="m2t-lS-Vlg" id="0TL-kM-LX6"/>
+                        <outlet property="name" destination="Vcc-Cc-JQb" id="47U-Ak-Xm8"/>
+                        <segue destination="qAs-jc-Efd" kind="presentation" identifier="toDetailSegue" id="zOo-I2-nam"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbl-8k-3p0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600.7633587786258" y="-27.464788732394368"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Hw6-mm-f7i">
+            <objects>
+                <viewController id="qAs-jc-Efd" customClass="DetailViewController" customModule="ucheba_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YDV-k9-w1P">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qvY-CC-9RI">
+                                <rect key="frame" x="0.0" y="59" width="393" height="381.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18617.upto100x100" translatesAutoresizingMaskIntoConstraints="NO" id="Ngf-DC-fb0">
+                                        <rect key="frame" x="76.666666666666686" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="HOK-ob-FZe"/>
+                                            <constraint firstAttribute="width" constant="240" id="x5j-3I-NWw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJc-1P-utE">
+                                        <rect key="frame" x="171.66666666666666" y="260" width="49.666666666666657" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Омский государственный университет путей сообщения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac7-u9-lcx">
+                                        <rect key="frame" x="10" y="300.33333333333331" width="373" height="40.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDp-ur-gRg">
+                                        <rect key="frame" x="150.66666666666666" y="361" width="92" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ac7-u9-lcx" secondAttribute="trailing" constant="10" id="2jc-Y0-r90"/>
+                                    <constraint firstItem="ac7-u9-lcx" firstAttribute="leading" secondItem="qvY-CC-9RI" secondAttribute="leading" constant="10" id="ohI-hO-IG8"/>
+                                </constraints>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAp-3p-KnI">
+                                <rect key="frame" x="0.0" y="448" width="393" height="335"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLb-hQ-qLC">
+                                        <rect key="frame" x="10" y="0.0" width="317" height="913"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="317" id="VaX-xn-f9x"/>
+                                        </constraints>
+                                        <string key="text">Омский государственный университет путей сообщения (ОмГУПС)&amp;mdash; высшее учебное заведение Сибири и&amp;nbsp;является одним из&amp;nbsp;ведущих транспортных вузов России.\nУникальная научная, учебная и&amp;nbsp;экспериментальная база университета позволяет готовить высококлассных специалистов по&amp;nbsp;современным и&amp;nbsp;перспективным специальностям и&amp;nbsp;специализациям. Университет имеет шесть благоустроенных общежитий гостиничного типа. Омский государственный университет путей сообщения (ОмГУПС)&amp;mdash; высшее учебное заведение Сибири и&amp;nbsp;является одним из&amp;nbsp;ведущих транспортных вузов России.\nУникальная научная, учебная и&amp;nbsp;экспериментальная база университета позволяет готовить высококлассных специалистов по&amp;nbsp;современным и&amp;nbsp;перспективным специальностям и&amp;nbsp;специализациям. Университет имеет шесть благоустроенных общежитий гостиничного типа. Омский государственный университет путей сообщения (ОмГУПС)&amp;mdash; высшее учебное заведение Сибири и&amp;nbsp;является одним из&amp;nbsp;ведущих транспортных вузов России.\nУникальная научная, учебная и&amp;nbsp;экспериментальная база университета позволяет готовить высококлассных специалистов по&amp;nbsp;современным и&amp;nbsp;перспективным специальностям и&amp;nbsp;специализациям. Университет имеет шесть благоустроенных общежитий гостиничного типа.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BLb-hQ-qLC" firstAttribute="leading" secondItem="iAp-3p-KnI" secondAttribute="leading" constant="10" id="4Fl-si-ElJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="BLb-hQ-qLC" secondAttribute="trailing" constant="10" id="8co-Gi-b3m"/>
+                                    <constraint firstItem="BLb-hQ-qLC" firstAttribute="top" secondItem="iAp-3p-KnI" secondAttribute="top" id="EMg-Gf-37C"/>
+                                    <constraint firstAttribute="bottom" secondItem="BLb-hQ-qLC" secondAttribute="bottom" id="NW4-Bv-fvH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y4l-1I-8hP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iAp-3p-KnI" firstAttribute="top" secondItem="qvY-CC-9RI" secondAttribute="bottom" constant="7.6699999999999999" id="7KY-8D-hF5"/>
+                            <constraint firstItem="iAp-3p-KnI" firstAttribute="leading" secondItem="y4l-1I-8hP" secondAttribute="leading" id="ORt-ct-h6y"/>
+                            <constraint firstItem="qvY-CC-9RI" firstAttribute="leading" secondItem="y4l-1I-8hP" secondAttribute="leading" id="VH3-WH-v47"/>
+                            <constraint firstItem="iAp-3p-KnI" firstAttribute="trailing" secondItem="y4l-1I-8hP" secondAttribute="trailing" id="Vc9-vA-Q7W"/>
+                            <constraint firstItem="y4l-1I-8hP" firstAttribute="trailing" secondItem="qvY-CC-9RI" secondAttribute="trailing" id="hHi-G3-ejL"/>
+                            <constraint firstItem="qvY-CC-9RI" firstAttribute="top" secondItem="y4l-1I-8hP" secondAttribute="top" id="m01-2s-fGZ"/>
+                            <constraint firstAttribute="bottom" secondItem="iAp-3p-KnI" secondAttribute="bottom" id="vyF-La-X6d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="otF-kv-c7R"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="BLb-hQ-qLC" id="1gt-3R-oks"/>
+                        <outlet property="logoView" destination="Ngf-DC-fb0" id="9sE-QO-96V"/>
+                        <outlet property="nameLabel" destination="ac7-u9-lcx" id="368-0x-64D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0m-Hi-6DU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2319.8473282442746" y="-37.323943661971832"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Xd-dB-h88">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2fd-ob-kaX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TDU-XY-bHF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hln-3s-ans"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJ9-ld-Oc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-77.099236641221367" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="18617.upto100x100" width="120" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
